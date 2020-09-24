@@ -5,11 +5,7 @@ Author URI: https://www.rg-software.one
 Description: Das Haupttheme der Zahnarztpraxis Dr. Käppler
 Version: 1.0.0
 */
-:root {
-    
-}
-
 
 body {
- 
+    background-color: --var(--primary-colour);
 }
