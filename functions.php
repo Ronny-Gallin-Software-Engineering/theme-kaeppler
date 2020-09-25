@@ -8,7 +8,7 @@ function zpkaeppler_customize_register($wp_customize) {
     ));
 
     $wp_customize->add_setting('zpkaeppler_background_colour', array(
-        'default' => '#000000',
+        'default' => '#F4F1F1',
         'transport' => 'refresh'
     ));
 
