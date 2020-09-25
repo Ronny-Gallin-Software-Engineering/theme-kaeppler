@@ -2,9 +2,15 @@
     font-family: 'Roboto', sans-serif;
     font-style: normal;
     font-weight: 100;
+    color: var(--darkest);
+}
+
+html, body {
+    min-height: 100%;
 }
 
 body {
+    margin: 0;
     background-color: var(--background-colour);
     
     h1 {
@@ -19,19 +25,27 @@ body {
     
 }
 
+div.border-right {
+    border-right: 1px solid var(--darkest);
+}
+
 p {
     font-size: 25px;
     line-height: 29px;
-
-    color: #000000;
 
     &.subline {
         text-align: center;
     }
 }
 
+.data {
+    color: black;
+    font-size: 20px;
+}
+
 .panel {
     background-color: white;
+    padding: 10px;
 }
 
 .logo {
@@ -47,4 +61,32 @@ p {
         }
     }
     
+}
+
+.footer-wrapper {
+    $margin: 150px;
+    $padding: 25px;
+    border-top: 1px solid var(--darkest);
+    position: absolute;
+    bottom: 0;
+    width: calc(100% - (2*#{$padding} + 2*#{$margin}));
+    display: flex;
+    margin-left: $margin;
+    margin-right: $margin;
+    padding: $padding 0px;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+
+    .footer-menu {
+        width: 33%;
+        text-align: center;
+    }
+
+    .credits {
+
+        width: 100%;
+        text-align: center;
+        font-size: 10px;
+        margin: 20px;
+    }
 }

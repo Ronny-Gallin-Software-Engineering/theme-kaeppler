@@ -28,6 +28,17 @@ function zpkaeppler_customize_register($wp_customize) {
         'section' => 'zpkaeppler_colour_scheme',
         'settings' => 'zpkaeppler_primary_colour'
     )));
+    
+    $wp_customize->add_setting('zpkaeppler_darkest_colour', array(
+        'default' => '#4c4c4c',
+        'transport' => 'refresh'
+    ));
+
+    $wp_customize->add_control( new WP_Customize_Color_Control($wp_customize, 'zpkaeppler_darkest_colour_control', array(
+        'label' => 'Darkest Colour',
+        'section' => 'zpkaeppler_colour_scheme',
+        'settings' => 'zpkaeppler_darkest_colour'
+    )));
 }
 
 function zpkaeppler_customize_css() { ?>
@@ -35,9 +46,8 @@ function zpkaeppler_customize_css() { ?>
         :root {
             --background-colour: <?php echo get_theme_mod('zpkaeppler_background_colour');?>;
             --primary-colour: <?php echo get_theme_mod('zpkaeppler_primary_colour');?>;
+            --darkest: <?php echo get_theme_mod('zpkaeppler_darkest_colour');?>;
         }
-
-
     </style>
 <?php }
 
